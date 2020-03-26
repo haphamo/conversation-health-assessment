@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+}
+
+body html {
+  width: 100%;
+}
+
+html {
+  background: url(./assets/ha-test-background.png); 
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto 100vw;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    background-size: cover ;
+  }
+}
+
