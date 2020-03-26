@@ -13,6 +13,21 @@ html {
   background-size: auto 100vw;
 }
 
+.container {
+  display: flex;
+}
+
+#avatar {
+  max-height: 8em;
+  padding-left: .25em;
+  margin-top: 14em;
+}
+
+#speech {
+  width: 15em;
+  height: 21em;
+  padding-top: 2em;
+}
 @media screen and (min-width: 768px) {
   html {
     background-size: cover ;
