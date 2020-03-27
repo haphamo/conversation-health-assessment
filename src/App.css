@@ -10,31 +10,93 @@ html {
   background: url(./assets/ha-test-background.png); 
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 100vh auto;
+  background-size: 130vh auto;
 }
 
 .container {
   display: flex;
+  flex-direction: column;
 }
 
+#top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1vh;
+}
 #avatar {
   max-height: 8em;
-  padding-left: .25em;
-  margin-top: 18em;
+  padding-left: .50em;
+  /* margin-top: 23em; */
 }
 
-#speech {
+#speech-bubble {
+  position: relative;
+  height: 53vh;
+  width: 93%;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  border-radius: 1em;
+  margin: 1vh 1vh 1vh 1vh;
+}
+
+#speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 1.969em solid transparent;
+	border-top-color: aliceblue;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -0.984em;
+	margin-bottom: -1.969em;
+}
+
+#text {
+  background-color: lightcoral;
+  margin-top: 1em;;
+  padding: 1em;
+  line-height: 1.5em;
+  /* word-spacing: 0.15em;
+  letter-spacing: 1.09em; */
+}
+
+#next-button {
+  height: 3em;
+  width: 6em;
+  background-color: white;
+  color: coral;
+  border: white;
+  margin: 1em 0em 0em 2em;
+  font-size: 1em
+}
+
+.button-and-avatar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+}
+/* #speech {
   max-width: 85%;
   height: 70%;
   padding-top: 2em;
+  padding-left: .25em;
+} */
+
+#button {
+  height: 3em;
+  width: 6em;
+
 }
+
 @media screen and (min-width: 768px) {
   html {
     background-size: cover ;
-  }
-
-  #speech {
-    width: 85%;
   }
 
 }
