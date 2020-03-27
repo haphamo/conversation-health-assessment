@@ -10,7 +10,8 @@ html {
   background: url(./assets/ha-test-background.png); 
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 130vh auto;
+  /* background-size: 130vh auto; */
+  background-size: auto 100%;
 }
 
 .container {
@@ -45,7 +46,7 @@ html {
 	content: '';
 	position: absolute;
 	bottom: 0;
-	left: 50%;
+	left: 62%;
 	width: 0;
 	height: 0;
 	border: 1.969em solid transparent;
@@ -57,10 +58,11 @@ html {
 }
 
 #text {
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
   margin-top: 1em;;
   padding: 1em;
   line-height: 1.5em;
+  font-size: 145%;
   /* word-spacing: 0.15em;
   letter-spacing: 1.09em; */
 }
@@ -72,7 +74,9 @@ html {
   color: coral;
   border: white;
   margin: 1em 0em 0em 2em;
-  font-size: 1em
+  font-size: 1em;
+  font-weight: 800;
+  border-radius: 0.5em;
 }
 
 .button-and-avatar {
