@@ -56,6 +56,7 @@ html {
 
 #speech-bubble {
   visibility: hidden;
+  justify-content: center;
   height: 53vh;
   width: 93%;
   display: flex;
@@ -175,9 +176,9 @@ html {
 }
 
 @media screen and (min-width: 1024px) {
+body {
+  margin-top: 4em;
+}
 
-  #avatar-section {
-    padding-left: 6em;
-  }
 }
 

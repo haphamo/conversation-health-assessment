@@ -5,6 +5,7 @@ import Typewriter from "typewriter-effect";
 export default function Message({ fixture, messageCounter }) {
   console.log('data', fixture)
   console.log('counter', messageCounter)
+  // use typewriter delete
   return (
     <Typewriter
       onInit={function(typewriter) {
