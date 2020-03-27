@@ -26,28 +26,15 @@ function App() {
     <div>
       <div className="container">
         <div id="top-section">
-          <div id="speech-bubble">
-            <div id="text">
-              <Message  fixture={messages} messageCounter={messageCounter}/>
-            {/* <Typewriter
-              onInit={(typewriter) => {
-                typewriter.changeDelay(1)
-                  .typeString('Hello World!')
-                  .callFunction(() => {
-                    console.log('String typed out!');
-                    console.log(typewriter);
-                  })
-                  .deleteAll()
-                  .callFunction(() => {
-                    console.log('All strings were deleted');
-                  })
-                  .typeString("I'm here")
          
-                  .start();
-              }}
-              /> */}
+            <div id="speech-bubble">
+              <div id="text">
+                <Message  fixture={messages} messageCounter={messageCounter}/>
+
+              </div>
             </div>
-          </div>
+           
+        
           <div className="button-and-avatar">
             <button onClick={() => setMessageCounter(messageCounter + 1)} id="next-button">NEXT</button>
             <div id="avatar-section">

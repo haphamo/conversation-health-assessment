@@ -90,7 +90,8 @@ html {
   margin-top: 1em;;
   padding: 1em;
   line-height: 1.5em;
-  font-size: 145%;
+  font-size: 125%;
+  font-family: 'Cutive Mono', monospace;
   /* word-spacing: 0.15em;
   letter-spacing: 1.09em; */
 }
@@ -141,5 +142,42 @@ html {
     background-size: cover ;
   }
 
+  #speech-bubble {
+    height: 27vh;
+    width: 75%;
+  }
+  #text {
+    margin-top: 0;
+  }
+  #speech-bubble:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 79%;
+    width: 0;
+    height: 0;
+    border: 1.969em solid transparent;
+    border-right-color: aliceblue;
+    border-left: 0;
+    border-bottom: 0;
+    margin-top: -0.984em;
+    margin-left: -1.969em;
+  }
+
+  #avatar {
+    max-height: 12em;
+  }
+  .button-and-avatar {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  #avatar-section {
+    padding-left: 6em;
+  }
 }
 

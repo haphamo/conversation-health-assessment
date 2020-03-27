@@ -13,7 +13,7 @@ export default function Message({ fixture, messageCounter }) {
             typewriter
             .pauseFor(3000)
             .start()
-            .changeDelay(30)
+            .changeDelay(60)
             .typeString(fixture[0]);
 
           } else if (messageCounter === 1) {
