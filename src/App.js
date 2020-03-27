@@ -2,18 +2,25 @@ import React, { useState, useEffect } from 'react'
 import avatar from './assets/ha-test-avatar.png'
 import button from './assets/ha-test-button.png'
 import './App.css';
-import Typewriter from 'typewriter-effect';
 
-// import Message from './components/Typewriter'
 
-  
+import Message from './components/Typewriter'
+
+const messages = {
+  0: "Our deep understanding of the Pharma industry ensures we deliver Medical-Legal-Regulatory compliant, friction-free, meaningful customer experiences - while providing compelling business value for our clients.",
+  1: "We are the only conversational AI platform powering healthcare brands.",
+  2: "Consumers across all industries are moving to chatbots and voice skills.   Patients and healthcare professionals are no different, but building conversational AI in healthcare is."
+};
 
 function App() {
-  const [messageCounter, setMessageCounter] = useState(0)
 
-    const nextMessage = function() {
-      setMessageCounter(1)
-    }
+  const [messageCounter, setMessageCounter] = useState(0)
+  
+  useEffect(() => {
+    console.log(messageCounter)
+    
+  }, messageCounter)
+  
 
   return (
     <div>
@@ -21,7 +28,8 @@ function App() {
         <div id="top-section">
           <div id="speech-bubble">
             <div id="text">
-            <Typewriter
+              <Message  fixture={messages} messageCounter={messageCounter}/>
+            {/* <Typewriter
               onInit={(typewriter) => {
                 typewriter.changeDelay(1)
                   .typeString('Hello World!')
@@ -37,11 +45,11 @@ function App() {
          
                   .start();
               }}
-              />
+              /> */}
             </div>
           </div>
           <div className="button-and-avatar">
-            <button onClick={nextMessage}id="next-button">NEXT</button>
+            <button onClick={() => setMessageCounter(messageCounter + 1)} id="next-button">NEXT</button>
             <div id="avatar-section">
               <img id="avatar" alt="chat bot avatar" src={avatar}></img>
             </div>

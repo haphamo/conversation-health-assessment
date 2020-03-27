@@ -1,14 +1,33 @@
-import React from 'react'
+import React from "react";
+import Typewriter from "typewriter-effect";
 
-const messages = {
-  0:  "Our deep understanding of the Pharma industry ensures we deliver Medical-Legal-Regulatory compliant, friction-free, meaningful customer experiences - while providing compelling business value for our clients.", 
-  1:  "We are the only conversational AI platform powering healthcare brands.",
-  2:   "Consumers across all industries are moving to chatbots and voice skills.   Patients and healthcare professionals are no different, but building conversational AI in healthcare is."
-}
 
-export default function Message({ messageCounter }) {
-
+export default function Message({ fixture, messageCounter }) {
+  console.log('data', fixture)
+  console.log('counter', messageCounter)
   return (
-   
-  )
+    <Typewriter
+      onInit={function(typewriter) {
+        // do some logic here
+          if(messageCounter === 0) {
+            typewriter
+            .start()
+            .changeDelay(3)
+            .typeString(fixture[0]);
+
+          } else if (messageCounter === 1) {
+            typewriter
+            .start()
+            .changeDelay(3)
+            .typeString(fixture[1]);
+          }  else if (messageCounter === 2) {
+            typewriter
+            .start()
+            .changeDelay(3)
+            .typeString(fixture[2]);
+          } 
+
+      }}
+    />
+  );
 }

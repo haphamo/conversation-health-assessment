@@ -31,6 +31,23 @@ html {
   /* margin-top: 23em; */
 }
 
+@-webkit-keyframes slide {
+  0%   { transform: translateY(60em); }
+  100% { transform: translateY(0em); }
+}
+@-moz-keyframes slide {
+  0%   { transform: translateY(60em); }
+  100% { transform: translateY(0em); }
+}
+@-o-keyframes slide {
+  0%   { transform: translateY(60em); }
+  100% { transform: translateY(0em); }
+}
+@keyframes slide {
+  0%   { transform: translateY(60em); }
+  100% { transform: translateY(0em); }
+}
+
 #speech-bubble {
   position: relative;
   height: 53vh;
@@ -40,7 +57,22 @@ html {
   background-color: aliceblue;
   border-radius: 1em;
   margin: 1vh 1vh 1vh 1vh;
+
+  animation-name: slide;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  /* transition-property: transform;
+  
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  transition-delay: 1s; */
 }
+
+
+/* #speech-bubble {
+  transform: translateY(0)
+} */
+
 
 #speech-bubble:after {
 	content: '';
@@ -54,7 +86,8 @@ html {
 	border-bottom: 0;
 	border-right: 0;
 	margin-left: -0.984em;
-	margin-bottom: -1.969em;
+  margin-bottom: -1.969em;
+
 }
 
 #text {
