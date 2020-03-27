@@ -32,24 +32,30 @@ html {
 }
 
 @-webkit-keyframes slide {
-  0%   { transform: translateY(60em); }
+  0%   { transform: translateY(60em); 
+          overflow: hidden;}
   100% { transform: translateY(0em); }
 }
 @-moz-keyframes slide {
-  0%   { transform: translateY(60em); }
+  0%   { transform: translateY(60em); 
+          overflow: hidden;}
   100% { transform: translateY(0em); }
 }
 @-o-keyframes slide {
-  0%   { transform: translateY(60em); }
+  0%   { transform: translateY(60em); 
+          overflow: hidden;}
   100% { transform: translateY(0em); }
 }
 @keyframes slide {
-  0%   { transform: translateY(60em); }
-  100% { transform: translateY(0em); }
+  0%   { transform: translateY(60em); 
+          overflow: hidden;}
+  50%  {visibility: visible;}
+  100% { transform: translateY(0em);
+          visibility: visible;} 
 }
 
 #speech-bubble {
-  position: relative;
+  visibility: hidden;
   height: 53vh;
   width: 93%;
   display: flex;
@@ -57,13 +63,12 @@ html {
   background-color: aliceblue;
   border-radius: 1em;
   margin: 1vh 1vh 1vh 1vh;
-
+  animation-delay: (50/100)s;
   animation-name: slide;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
 
 }
-
 
 #speech-bubble:after {
 	content: '';
@@ -91,6 +96,7 @@ html {
 }
 
 #next-button {
+  visibility: hidden;
   height: 3em;
   width: 6em;
   background-color: white;
@@ -100,12 +106,22 @@ html {
   font-size: 1em;
   font-weight: 800;
   border-radius: 0.5em;
-  transform: translateY(60em);
+  cursor: pointer;
+
   animation-name: slide;
-  animation-delay: 3s;
+  animation-delay: 10s;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
+
+#avatar-section {
+  visibility: hidden;
+  animation-name: slide;
+
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
 
 .button-and-avatar {
   display: flex;
@@ -113,12 +129,6 @@ html {
   justify-content: space-between;
 
 }
-/* #speech {
-  max-width: 85%;
-  height: 70%;
-  padding-top: 2em;
-  padding-left: .25em;
-} */
 
 #button {
   height: 3em;
