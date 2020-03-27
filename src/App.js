@@ -1,35 +1,20 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import avatar from './assets/ha-test-avatar.png'
 import button from './assets/ha-test-button.png'
-import Typewriter from 'typewriter-effect';
-
-
 import './App.css';
+import Message from './components/Typewriter'
 
+  
 
 function App() {
 
-  const message = new Typewriter('#text', {
-    strings: ['Hello', 'World'],
-    autoStart: true,
-  });
-  console.log(message.context)
   return (
     <div>
-
       <div className="container">
-       
         <div id="top-section">
           <div id="speech-bubble">
             <div id="text">
-            <Typewriter
-              options={{
-                strings: ['Our deep understanding of the Pharma industry ensures we deliver Medical-Legal-Regulatory compliant, friction-free, meaningful customer experiences - while providing compelling business value for our clients.'],
-                autoStart: true,
-                loop: false,
-              }}
-            />
-              
+              <Message />
             </div>
           </div>
           <div className="button-and-avatar">
@@ -38,12 +23,7 @@ function App() {
               <img id="avatar" alt="chat bot avatar" src={avatar}></img>
             </div>
           </div>
-          
-         
         </div>
-        
-
-        
       </div>
 
     </div>
