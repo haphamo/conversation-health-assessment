@@ -11,6 +11,7 @@ export default function Message({ fixture, messageCounter }) {
         // do some logic here
           if(messageCounter === 0) {
             typewriter
+            .pauseFor(2000)
             .start()
             .changeDelay(3)
             .typeString(fixture[0]);

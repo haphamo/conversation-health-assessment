@@ -61,17 +61,8 @@ html {
   animation-name: slide;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-  /* transition-property: transform;
-  
-  transition-duration: 1s;
-  transition-timing-function: linear;
-  transition-delay: 1s; */
+
 }
-
-
-/* #speech-bubble {
-  transform: translateY(0)
-} */
 
 
 #speech-bubble:after {
@@ -87,7 +78,6 @@ html {
 	border-right: 0;
 	margin-left: -0.984em;
   margin-bottom: -1.969em;
-
 }
 
 #text {
@@ -110,6 +100,11 @@ html {
   font-size: 1em;
   font-weight: 800;
   border-radius: 0.5em;
+  transform: translateY(60em);
+  animation-name: slide;
+  animation-delay: 3s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 .button-and-avatar {
