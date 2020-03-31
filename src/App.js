@@ -13,10 +13,16 @@ const messages = [
 function App() {
   const [count, setCount] = useState(0);
 
-  const handleClick = () => {
-    setCount(count + 1);
+  const handleClick = (action) => {
+    if(action === "next") {
+      setCount(count + 1);
+    } else {
+      setCount(count - 1)
+    }
+    
   };
-
+  console.log(count)
+ 
   return (
     <div>
       <div className="container">
@@ -59,10 +65,10 @@ function App() {
 
           <div className="button-and-avatar">
             <div className="buttons">
-              {count > 0 && <button onClick={() => handleClick()} id="next-button">
+              {count > 0 && <button className="nav-button" id="back" onClick={() => handleClick("back")}>
                 BACK
               </button>}
-              <button onClick={() => handleClick()} id="next-button">
+              <button onClick={() => handleClick("next")} className="nav-button" id="next">
                 NEXT
               </button>
 
