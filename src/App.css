@@ -54,6 +54,11 @@ html {
           visibility: visible;} 
 }
 
+@keyframes appear {
+  0%   { visibility: hidden;}
+  100% { visibility: visible;} 
+}
+
 #speech-bubble {
   visibility: hidden;
   justify-content: center;
@@ -112,14 +117,18 @@ html {
 
 }
 
-#next {
+.next {
   animation-name: slide;
   animation-delay: 2s;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
-#back {
+.next-appear {
+  visibility: visible;
+}
+
+.back {
   visibility: visible;
 }
 

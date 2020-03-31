@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import avatar from "./assets/ha-test-avatar.png";
 import button from "./assets/ha-test-button.png";
 import "./App.css";
@@ -16,7 +16,7 @@ function App() {
   const handleClick = (action) => {
     if(action === "next") {
       setCount(count + 1);
-    } else {
+    } else if(action === "back") {
       setCount(count - 1)
     }
   };
@@ -68,12 +68,19 @@ function App() {
 
           <div className="button-and-avatar">
             <div className="buttons">
-              {count > 0 && <button className="nav-button" id="back" onClick={() => handleClick("back")}>
+              {count > 0 && <button className="nav-button back" onClick={() => handleClick("back")}>
                 BACK
               </button>}
-              {(count < messages.length - 1) && <button onClick={() => handleClick("next")} className="nav-button" id="next">
-                NEXT
-              </button>}
+              {((count > 0) && (count <  messages.length - 1)) && 
+                <button onClick={() => handleClick("next")} className="nav-button next-appear">
+                  NEXT
+                </button>
+                }
+              {count === 0 && 
+                <button onClick={() => handleClick("next")} className="nav-button next">
+                  NEXT
+                </button>}
+              
 
             </div>
             <div id="avatar-section">
