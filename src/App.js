@@ -27,8 +27,8 @@ function App() {
                 <Typewriter
                   onInit={typewriter => {
                     typewriter
-                      .pauseFor(3000)
-                      .changeDelay(50)
+                      .pauseFor(1000)
+                      .changeDelay(20)
                       .typeString(messages[0])
                       .start();
                   }}
@@ -38,7 +38,7 @@ function App() {
                 <Typewriter
                   onInit={typewriter => {
                     typewriter
-                      .changeDelay(50)
+                      .changeDelay(20)
                       .typeString(messages[1])
                       .start();
                   }}
@@ -48,7 +48,7 @@ function App() {
                 <Typewriter
                   onInit={typewriter => {
                     typewriter
-                      .changeDelay(50)
+                      .changeDelay(20)
                       .typeString(messages[2])
                       .start();
                   }}
@@ -58,9 +58,15 @@ function App() {
           </div>
 
           <div className="button-and-avatar">
-            <button onClick={() => handleClick()} id="next-button">
-              NEXT
-            </button>
+            <div className="buttons">
+              {count > 0 && <button onClick={() => handleClick()} id="next-button">
+                BACK
+              </button>}
+              <button onClick={() => handleClick()} id="next-button">
+                NEXT
+              </button>
+
+            </div>
             <div id="avatar-section">
               <img id="avatar" alt="chat bot avatar" src={avatar}></img>
             </div>

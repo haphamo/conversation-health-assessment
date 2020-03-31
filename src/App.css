@@ -111,7 +111,7 @@ html {
   cursor: pointer;
 
   animation-name: slide;
-  animation-delay: 15s;
+  /* animation-delay: 10s; */
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
@@ -176,9 +176,9 @@ html {
 }
 
 @media screen and (min-width: 1024px) {
-body {
-  margin-top: 4em;
-}
+  body {
+    margin-top: 4em;
+  }
 
 }
 
