@@ -1,14 +1,10 @@
-import React, { useState, Fragment } from "react";
+import React, { useState } from "react";
 import avatar from "./assets/ha-test-avatar.png";
 import button from "./assets/ha-test-button.png";
 import "./App.css";
 import Typewriter from "typewriter-effect";
+import { messages } from "./lib/messages"
 
-const messages = [
-  "<strong>Our deep understanding of the Pharma industry </strong> ensures we deliver Medical-Legal-Regulatory compliant, friction-free, meaningful customer experiences - while providing compelling business value for our clients.",
-  "We are the only conversational AI platform powering healthcare brands.",
-  "<strong>Consumers across all industries are moving to chatbots and voice skills.</strong>   Patients and healthcare professionals are no different, but building conversational AI in healthcare is."
-];
 // Next step is to make code DRY
 function App() {
   const [count, setCount] = useState(0);
@@ -21,11 +17,6 @@ function App() {
     }
   };
 
-  if(count === messages.lenth) {
-
-  }
-  console.log(count)
- 
   return (
     <div>
       <div className="container">
