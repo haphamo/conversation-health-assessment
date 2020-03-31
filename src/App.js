@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import avatar from "./assets/ha-test-avatar.png";
-import button from "./assets/ha-test-button.png";
+
 import "./App.css";
 import Typewriter from "typewriter-effect";
 import { messages } from "./lib/messages"
+import ButtonAndAvatar from "./components/ButtonAndAvatar";
 
 // Next step is to make code DRY
 function App() {
@@ -56,28 +57,7 @@ function App() {
               )}
             </div>
           </div>
-
-          <div className="button-and-avatar">
-            <div className="buttons">
-              {count > 0 && <button className="nav-button back" onClick={() => handleClick("back")}>
-                BACK
-              </button>}
-              {((count > 0) && (count <  messages.length - 1)) && 
-                <button onClick={() => handleClick("next")} className="nav-button next-appear">
-                  NEXT
-                </button>
-                }
-              {count === 0 && 
-                <button onClick={() => handleClick("next")} className="nav-button next">
-                  NEXT
-                </button>}
-              
-
-            </div>
-            <div id="avatar-section">
-              <img id="avatar" alt="chat bot avatar" src={avatar}></img>
-            </div>
-          </div>
+          <ButtonAndAvatar count={count} messages={messages} handleClick={handleClick}/>
         </div>
       </div>
     </div>
