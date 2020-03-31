@@ -5,6 +5,7 @@ import "./App.css";
 import Typewriter from "typewriter-effect";
 import { messages } from "./lib/messages"
 import ButtonAndAvatar from "./components/ButtonAndAvatar";
+import Messages from "./components/Messages";
 
 // Next step is to make code DRY
 function App() {
@@ -23,39 +24,7 @@ function App() {
       <div className="container">
         <div id="top-section">
           <div id="speech-bubble">
-            <div id="text">
-              {count === 0 && (
-                <Typewriter
-                  onInit={typewriter => {
-                    typewriter
-                      .pauseFor(1000)
-                      .changeDelay(20)
-                      .typeString(messages[0])
-                      .start();
-                  }}
-                />
-              )}
-              {count === 1 && (
-                <Typewriter
-                  onInit={typewriter => {
-                    typewriter
-                      .changeDelay(20)
-                      .typeString(messages[1])
-                      .start();
-                  }}
-                />
-              )}
-              {count >= 2 && (
-                <Typewriter
-                  onInit={typewriter => {
-                    typewriter
-                      .changeDelay(20)
-                      .typeString(messages[2])
-                      .start();
-                  }}
-                />
-              )}
-            </div>
+            <Messages count={count} messages={messages}/>
           </div>
           <ButtonAndAvatar count={count} messages={messages} handleClick={handleClick}/>
         </div>
