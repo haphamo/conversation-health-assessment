@@ -19,8 +19,11 @@ function App() {
     } else {
       setCount(count - 1)
     }
-    
   };
+
+  if(count === messages.lenth) {
+
+  }
   console.log(count)
  
   return (
@@ -68,9 +71,9 @@ function App() {
               {count > 0 && <button className="nav-button" id="back" onClick={() => handleClick("back")}>
                 BACK
               </button>}
-              <button onClick={() => handleClick("next")} className="nav-button" id="next">
+              {(count < messages.length - 1) && <button onClick={() => handleClick("next")} className="nav-button" id="next">
                 NEXT
-              </button>
+              </button>}
 
             </div>
             <div id="avatar-section">
