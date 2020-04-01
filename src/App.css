@@ -165,9 +165,6 @@ html {
 }
 
 @media screen and (min-width: 768px) {
-  /* html {
-    background-size: cover ;
-  } */
   #text {
     font-size: 125%;
   }
@@ -214,10 +211,6 @@ html {
 @media screen and (min-width: 1024px) {
   body {
     margin-top: 4em;
-  }
-
-  #speech-bubble {
-    height: 27vh;
   }
 }
 

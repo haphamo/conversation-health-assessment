@@ -20,7 +20,6 @@ function App() {
     if(action === "next") {
       setCount(count + 1);
       setText([...text, messages[count + 1]])
-      // executeScroll()
     } else if(action === "back") {
       setCount(count - 1)
     }
