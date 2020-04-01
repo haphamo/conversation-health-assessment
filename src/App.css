@@ -7,11 +7,16 @@ body html {
 }
 
 html {
-  background: url(./assets/ha-test-background.png); 
+  background: url(./assets/ha-test-background.png) fixed; 
   background-repeat: no-repeat;
   background-position: top center;
   /* background-size: 130vh auto; */
-  background-size: auto 100%;
+  /* background-size: 100vh 100%; */
+ 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .container {
@@ -62,7 +67,7 @@ html {
 #speech-bubble {
   visibility: hidden;
   justify-content: center;
-  height: 53vh;
+  height: auto;
   width: 93%;
   display: flex;
   flex-direction: column;
@@ -152,7 +157,11 @@ html {
 #button {
   height: 3em;
   width: 6em;
+  display: flex;
+}
 
+#buttons-section {
+  display: flex;
 }
 
 @media screen and (min-width: 768px) {
@@ -161,7 +170,7 @@ html {
   }
 
   #speech-bubble {
-    height: 27vh;
+    height: auto;
     width: 75%;
   }
   #text {
@@ -189,6 +198,10 @@ html {
     flex-direction: row-reverse;
     justify-content: flex-end;
   }
+  .nav-button {
+    margin: 1em 0em 0em 2em;
+
+  }
 
 }
 
@@ -197,5 +210,8 @@ html {
     margin-top: 4em;
   }
 
+  #speech-bubble {
+    height: 27vh;
+  }
 }
 

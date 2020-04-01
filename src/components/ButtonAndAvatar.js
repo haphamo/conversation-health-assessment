@@ -4,7 +4,7 @@ import avatar from "../assets/ha-test-avatar.png";
 export default function ButtonAndAvatar({ count, messages, handleClick }) {
   return (
     <div className="button-and-avatar">
-      <div className="buttons">
+      <div className="buttons" id="buttons-section">
         {count > 0 && (
           <button
             className="nav-button back"
