@@ -9,8 +9,8 @@ export default function Message({ message, typingSpeed}) {
         <Typewriter
             onInit={typewriter => {
               typewriter
-                .pauseFor(typingSpeed)
-                .changeDelay(20)
+                .pauseFor(1000)
+                .changeDelay(typingSpeed)
                 .typeString(message)
                 .start();
             }}
