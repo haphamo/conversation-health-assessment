@@ -73,7 +73,6 @@ html {
   animation-name: slide;
   animation-duration: 3s;
   animation-fill-mode: forwards;
-
 }
 
 #speech-bubble:after {
@@ -90,6 +89,8 @@ html {
 	margin-left: -0.984em;
   margin-bottom: -1.969em;
 }
+
+
 
 #text {
   /* background-color: lightcoral; */
@@ -170,7 +171,7 @@ html {
     content: '';
     position: absolute;
     left: 0;
-    top: 79%;
+    top: 72%;
     width: 0;
     height: 0;
     border: 1.969em solid transparent;
