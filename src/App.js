@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./App.css";
 import { messages } from "./lib/messages"
@@ -11,23 +11,21 @@ const typingSpeed = 5
 
 function App() {
   const [count, setCount] = useState(0);
-
-  // const [ first, ...rest ] = messages
+  const [ first, ...rest ] = messages
+  const array = [first]
+  const [text, setText] = useState(array)
 
   const handleClick = (action) => {
     // handles creating the speech bubbles
     if(action === "next") {
       setCount(count + 1);
+      setText([...text, messages[count + 1]])
     } else if(action === "back") {
       setCount(count - 1)
     }
   };
 
-  // const test = messages.map(function(message, index) {
-  //   return `${index}: ${message}`
-  // })
-
-  const messagesToDisplay = messages.map(function(message, index) {
+  const messagesToDisplay = text.map(function(message, index) {
     return(
       <Messages key={index} count={count} typingSpeed={typingSpeed} messages={messages[index]}/>
     )
