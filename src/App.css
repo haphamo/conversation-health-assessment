@@ -120,7 +120,7 @@ html {
 
 .next {
   animation-name: slide;
-  animation-delay: 2s;
+  animation-delay: 4s;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
