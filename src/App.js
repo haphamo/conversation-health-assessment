@@ -1,70 +1,42 @@
-import React, { useState } from "react";
-import avatar from "./assets/ha-test-avatar.png";
-import button from "./assets/ha-test-button.png";
-import "./App.css";
-import Typewriter from "typewriter-effect";
+import React, { useState, useEffect } from "react";
 
-const messages = [
-  "<strong>Our deep understanding of the Pharma industry </strong> ensures we deliver Medical-Legal-Regulatory compliant, friction-free, meaningful customer experiences - while providing compelling business value for our clients.",
-  "We are the only conversational AI platform powering healthcare brands.",
-  "<strong>Consumers across all industries are moving to chatbots and voice skills.</strong>   Patients and healthcare professionals are no different, but building conversational AI in healthcare is."
-];
+import "./App.css";
+import { messages } from "./lib/messages"
+import ButtonAndAvatar from "./components/ButtonAndAvatar";
+import Messages from "./components/Messages";
+
 // Next step is to make code DRY
+// The larger the number, the slower the type speed, ex. 500
+const typingSpeed = 5
+
 function App() {
   const [count, setCount] = useState(0);
+  const [ first, ...rest ] = messages
+  const array = [first]
+  const [text, setText] = useState(array)
 
-  const handleClick = () => {
-    setCount(count + 1);
+  const handleClick = (action) => {
+    // handles creating the speech bubbles
+    if(action === "next") {
+      setCount(count + 1);
+      setText([...text, messages[count + 1]])
+    } else if(action === "back") {
+      setCount(count - 1)
+    }
   };
 
+  const messagesToDisplay = text.map(function(message, index) {
+    return(
+      <Messages key={index} count={count} typingSpeed={typingSpeed} messages={messages[index]}/>
+    )
+  })
+  
   return (
     <div>
       <div className="container">
         <div id="top-section">
-          <div id="speech-bubble">
-            <div id="text">
-              {count === 0 && (
-                <Typewriter
-                  onInit={typewriter => {
-                    typewriter
-                      .pauseFor(3000)
-                      .changeDelay(50)
-                      .typeString(messages[0])
-                      .start();
-                  }}
-                />
-              )}
-              {count === 1 && (
-                <Typewriter
-                  onInit={typewriter => {
-                    typewriter
-                      .changeDelay(50)
-                      .typeString(messages[1])
-                      .start();
-                  }}
-                />
-              )}
-              {count >= 2 && (
-                <Typewriter
-                  onInit={typewriter => {
-                    typewriter
-                      .changeDelay(50)
-                      .typeString(messages[2])
-                      .start();
-                  }}
-                />
-              )}
-            </div>
-          </div>
-
-          <div className="button-and-avatar">
-            <button onClick={() => handleClick()} id="next-button">
-              NEXT
-            </button>
-            <div id="avatar-section">
-              <img id="avatar" alt="chat bot avatar" src={avatar}></img>
-            </div>
-          </div>
+          {messagesToDisplay}
+          <ButtonAndAvatar count={count} messages={messages} handleClick={handleClick}/>
         </div>
       </div>
     </div>

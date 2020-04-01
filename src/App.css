@@ -54,6 +54,11 @@ html {
           visibility: visible;} 
 }
 
+@keyframes appear {
+  0%   { visibility: hidden;}
+  100% { visibility: visible;} 
+}
+
 #speech-bubble {
   visibility: hidden;
   justify-content: center;
@@ -68,7 +73,6 @@ html {
   animation-name: slide;
   animation-duration: 3s;
   animation-fill-mode: forwards;
-
 }
 
 #speech-bubble:after {
@@ -86,6 +90,8 @@ html {
   margin-bottom: -1.969em;
 }
 
+
+
 #text {
   /* background-color: lightcoral; */
   margin-top: 1em;;
@@ -97,7 +103,7 @@ html {
   letter-spacing: 1.09em; */
 }
 
-#next-button {
+.nav-button {
   visibility: hidden;
   height: 3em;
   width: 6em;
@@ -110,10 +116,21 @@ html {
   border-radius: 0.5em;
   cursor: pointer;
 
+}
+
+.next {
   animation-name: slide;
-  animation-delay: 15s;
+  animation-delay: 2s;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+}
+
+.next-appear {
+  visibility: visible;
+}
+
+.back {
+  visibility: visible;
 }
 
 #avatar-section {
@@ -154,7 +171,7 @@ html {
     content: '';
     position: absolute;
     left: 0;
-    top: 79%;
+    top: 72%;
     width: 0;
     height: 0;
     border: 1.969em solid transparent;
@@ -176,9 +193,9 @@ html {
 }
 
 @media screen and (min-width: 1024px) {
-body {
-  margin-top: 4em;
-}
+  body {
+    margin-top: 4em;
+  }
 
 }
 
