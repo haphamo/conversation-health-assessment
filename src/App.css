@@ -76,7 +76,7 @@ html {
   margin: 1vh 1vh 1vh 1vh;
   animation-delay: (50/100)s;
   animation-name: slide;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 
@@ -139,9 +139,11 @@ html {
 #avatar-section {
   visibility: hidden;
   animation-name: slide;
-
   animation-duration: 1s;
   animation-fill-mode: forwards;
+  position: fixed;
+  bottom: 10vh;
+  right: 1vh;
 }
 
 
@@ -163,9 +165,9 @@ html {
 }
 
 @media screen and (min-width: 768px) {
-  html {
+  /* html {
     background-size: cover ;
-  }
+  } */
   #text {
     font-size: 125%;
   }
@@ -194,13 +196,17 @@ html {
   #avatar {
     max-height: 12em;
   }
+  #avatar-section {
+    position: static;
+    bottom: 0vh;
+  }
+  
   .button-and-avatar {
     flex-direction: row-reverse;
     justify-content: flex-end;
   }
   .nav-button {
     margin: 1em 0em 0em 2em;
-
   }
 
 }

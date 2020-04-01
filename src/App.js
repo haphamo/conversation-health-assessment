@@ -11,7 +11,7 @@ const typingSpeed = 5
 
 function App() {
   const [count, setCount] = useState(0);
-  const [ first, ...rest ] = messages
+  const [ first ] = messages
   const array = [first]
   const [text, setText] = useState(array)
 
