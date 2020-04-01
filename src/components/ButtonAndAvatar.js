@@ -2,8 +2,9 @@ import React from "react";
 import avatar from "../assets/ha-test-avatar.png";
 
 export default function ButtonAndAvatar({ count, messages, handleClick }) {
+
   return (
-    <div className="button-and-avatar">
+    <div className="button-and-avatar" >
       <div className="buttons" id="buttons-section">
         {count > 0 && (
           <button

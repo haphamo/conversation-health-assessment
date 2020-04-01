@@ -12,11 +12,11 @@ html {
   background-position: top center;
   /* background-size: 130vh auto; */
   /* background-size: 100vh 100%; */
- 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -95,14 +95,12 @@ html {
   margin-bottom: -1.969em;
 }
 
-
-
 #text {
   /* background-color: lightcoral; */
   margin-top: 1em;;
   padding: 1em;
   line-height: 1.5em;
-  font-size: 125%;
+  font-size: 95%;
   font-family: 'Cutive Mono', monospace;
   /* word-spacing: 0.15em;
   letter-spacing: 1.09em; */
@@ -115,7 +113,7 @@ html {
   background-color: white;
   color: coral;
   border: white;
-  margin: 1em 0em 0em 2em;
+  margin: 1em 0em 0em 1em;
   font-size: 1em;
   font-weight: 800;
   border-radius: 0.5em;
@@ -168,7 +166,9 @@ html {
   html {
     background-size: cover ;
   }
-
+  #text {
+    font-size: 125%;
+  }
   #speech-bubble {
     height: auto;
     width: 75%;
