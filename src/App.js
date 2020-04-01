@@ -27,7 +27,7 @@ function App() {
 
   const messagesToDisplay = text.map(function(message, index) {
     return(
-      <Messages key={index} count={count} typingSpeed={typingSpeed} messages={messages[index]}/>
+      <Messages key={index} typingSpeed={typingSpeed} message={messages[index]}/>
     )
   })
   
